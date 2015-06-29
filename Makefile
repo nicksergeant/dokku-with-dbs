@@ -1,3 +1,12 @@
+salt:
+	@scp -q -P 55555 -r ./salt/ nick@dokku.nicksergeant.com:salt
+	@scp -q -P 55555 -r ./pillar/ nick@dokku.nicksergeant.com:pillar
+	@ssh nick@dokku.nicksergeant.com -p 55555 'sudo rm -rf /srv'
+	@ssh nick@dokku.nicksergeant.com -p 55555 'sudo mkdir /srv'
+	@ssh nick@dokku.nicksergeant.com -p 55555 'sudo mv ~/salt /srv/salt'
+	@ssh nick@dokku.nicksergeant.com -p 55555 'sudo mv ~/pillar /srv/pillar'
+	@ssh nick@dokku.nicksergeant.com -p 55555 'sudo salt-call --local state.highstate'
+
 server:
 	ssh root@dokku.nicksergeant.com 'ssh-keygen'
 	@scp -q -P 22 -r ~/.ssh/id_dsa.pub root@dokku.nicksergeant.com:/root/.ssh/authorized_keys
@@ -19,4 +28,4 @@ server:
 	@ssh root@dokku.nicksergeant.com 'mv ~/pillar /srv/pillar'
 	@ssh root@dokku.nicksergeant.com 'salt-call --local state.highstate'
 
-.PHONY: server
+.PHONY: salt server

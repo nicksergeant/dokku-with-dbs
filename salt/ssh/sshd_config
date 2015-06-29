@@ -87,4 +87,4 @@ UseDNS no
 Port {{ pillar.ssh.port }}
 PermitRootLogin no
 PasswordAuthentication no
-AllowUsers {% for user in pillar.users %}{{ user.name }} {% endfor %}
+AllowUsers dokku {% for user in pillar.users %}{{ user.name }} {% endfor %}

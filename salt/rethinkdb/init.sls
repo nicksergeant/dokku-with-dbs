@@ -34,20 +34,12 @@ rethinkdb-site:
     - name: /etc/nginx/sites-available/rethinkdb
     - source: salt://rethinkdb/rethinkdb.nginx.conf
     - template: jinja
-    - group: deploy
     - mode: 755
-    - require:
-      - pkg: nginx
-      - group: deploy
 
 enable-rethinkdb-site:
   file.symlink:
     - name: /etc/nginx/sites-enabled/rethinkdb
     - target: /etc/nginx/sites-available/rethinkdb
     - force: false
-    - require:
-      - pkg: nginx
   cmd.run:
     - name: service nginx restart
-    - require:
-      - pkg: nginx

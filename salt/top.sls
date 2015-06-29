@@ -1,12 +1,11 @@
 base:
   '*':
     - system
-    - iptables
     - ssh
+    - iptables
     - users
-    - fish
-    - rethinkdb
-    - nodejs
-    - supervisor
-    - application
     - cron
+    - fish
+    - mongodb
+    - postgresql
+    - rethinkdb

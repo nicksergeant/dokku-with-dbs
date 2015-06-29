@@ -19,7 +19,7 @@ wheel-group:
       {% endfor %}
       {% if user.name != 'deploy' %}
       - pkg: fish
-      {% endfor %}
+      {% endif %}
     - shell: /usr/bin/fish
   ssh_auth.present:
     - user: {{ user.name }}

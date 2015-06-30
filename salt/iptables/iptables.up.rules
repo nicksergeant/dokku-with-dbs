@@ -20,8 +20,9 @@
 -A INPUT -p tcp --dport 443 -j ACCEPT
 
 
-# Allow connections to PostgreSQL from Docker containers.
+# Allow connections to databases from Docker containers.
 -A INPUT -m tcp -p tcp -s 172.17.0.0/16 --dport 5432 -j ACCEPT
+-A INPUT -m tcp -p tcp -s 172.17.0.0/16 --dport 27017 -j ACCEPT
 
 
 #  Allows SSH connections

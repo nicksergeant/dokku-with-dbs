@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo sh -c '/sbin/iptables-restore < /etc/iptables.up.rules'
+sudo sh -c '/sbin/iptables-restore --noflush < /etc/iptables.up.rules'

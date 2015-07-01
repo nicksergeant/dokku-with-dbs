@@ -42,7 +42,6 @@
 
 # Reject all other inbound - default deny unless explicitly allowed policy
 -A INPUT -j REJECT
--A FORWARD -j REJECT
 
 
 COMMIT

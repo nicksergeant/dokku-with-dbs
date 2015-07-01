@@ -9,7 +9,7 @@ flush-iptables:
   cmd.run:
     - names:
       - /sbin/iptables -F INPUT && /sbin/iptables -F OUTPUT && /sbin/iptables -F FORWARD
-      - /sbin/iptables-restore < /etc/iptables.up.rules --noflush
+      - /sbin/iptables-restore --noflush < /etc/iptables.up.rules
     - watch:
       - file: /etc/iptables.up.rules
     - require:

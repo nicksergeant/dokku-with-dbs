@@ -6,7 +6,7 @@ The following databases are included:
 
 - PostgreSQL
 - MongoDB
-- RethinKDB
+- RethinkDB
 
 These databases reside on the host machine itself and are not managed with Dokku
 or Docker. It's up to you to manage users and databases.

@@ -8,7 +8,7 @@
     - user: root
     - minute: '*/10'
 
-/usr/local/bin/dokku cleanup:
+/usr/local/bin/dokku cleanup > /tmp/cron.dokku-cleanup:
   cron.present:
     - user: root
     - minute: 0

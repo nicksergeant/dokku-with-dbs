@@ -3,7 +3,7 @@
     - user: root
     - minute: 0
 
-/usr/local/bin/dokku run slacktappd node index.js > /tmp/cron.slacktappd:
+/usr/local/bin/dokku run slacktappd-pixelbots node index.js > /tmp/cron.slacktappd-pixelbots:
   cron.present:
     - user: root
     - minute: '1,11,21,31,41,51'

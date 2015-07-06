@@ -23,4 +23,5 @@ Setup
 7.  When asked 'Machine's hostname or IP': your hostname.
 8.  When asked 'Use vhost based deployments?': `yes`.
 9.  When asked 'Keyfile for initial user': `/root/.ssh/authorized_keys` (your DSA public key is copied here).
+10. Configure swap if necessary [according to this](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04).
 10. Reboot the server.

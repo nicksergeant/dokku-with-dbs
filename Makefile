@@ -10,6 +10,8 @@ salt:
 server:
 	ssh root@dokku.nicksergeant.com 'ssh-keygen'
 	@scp -q -P 22 -r ~/.ssh/id_dsa.pub root@dokku.nicksergeant.com:/root/.ssh/authorized_keys
+	@ssh root@dokku.nicksergeant.com 'apt-get update'
+	@ssh root@dokku.nicksergeant.com 'apt-get upgrade'
 	@ssh root@dokku.nicksergeant.com 'curl --silent https://get.docker.io/gpg 2> /dev/null | apt-key add - 2>&1 >/dev/null'
 	@ssh root@dokku.nicksergeant.com 'curl --silent https://packagecloud.io/gpg.key 2> /dev/null | apt-key add - 2>&1 >/dev/null'
 	@ssh root@dokku.nicksergeant.com 'echo "deb http://get.docker.io/ubuntu docker main" > /etc/apt/sources.list.d/docker.list'

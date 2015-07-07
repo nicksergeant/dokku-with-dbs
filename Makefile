@@ -1,3 +1,5 @@
+deploy: salt
+
 salt:
 	@scp -q -P 55555 -r ./salt/ nick@dokku.nicksergeant.com:salt
 	@scp -q -P 55555 -r ./pillar/ nick@dokku.nicksergeant.com:pillar
@@ -30,4 +32,4 @@ server:
 	@ssh root@dokku.nicksergeant.com 'mv ~/pillar /srv/pillar'
 	@ssh root@dokku.nicksergeant.com 'salt-call --local state.highstate'
 
-.PHONY: salt server
+.PHONY: deploy salt server

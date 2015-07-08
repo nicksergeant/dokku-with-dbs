@@ -32,3 +32,12 @@
   cron.present:
     - user: root
     - minute: '5,15,25,35,45,55'
+
+/usr/local/bin/dokku run humanitybox.com node scripts/make/build.js > /tmp/cron.humanitybox-build:
+  cron.present:
+    - hour: 3
+    - minute: 7
+
+/usr/local/bin/dokku run humanitybox.com node scripts/make/stats.js > /tmp/cron.humanitybox-stats:
+  cron.present:
+    - minute: 6

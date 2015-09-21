@@ -1,8 +1,3 @@
-/usr/local/bin/dokku cleanup > /tmp/cron.dokku-cleanup:
-  cron.present:
-    - user: root
-    - minute: 0
-
 /usr/local/bin/dokku run elfpowered.com python manage.py process_hits > /tmp/cron.elfpowered:
   cron.present:
     - user: root
@@ -33,11 +28,16 @@
     - user: root
     - minute: '5,15,25,35,45,55'
 
+/usr/local/bin/dokku run humanitybox.com node scripts/make/stats.js > /tmp/cron.humanitybox-stats:
+  cron.present:
+    - minute: 6
+
 /usr/local/bin/dokku run humanitybox.com node scripts/make/build.js > /tmp/cron.humanitybox-build:
   cron.present:
     - hour: 3
     - minute: 7
 
-/usr/local/bin/dokku run humanitybox.com node scripts/make/stats.js > /tmp/cron.humanitybox-stats:
+/usr/local/bin/dokku cleanup > /tmp/cron.dokku-cleanup:
   cron.present:
-    - minute: 6
+    - user: root
+    - minute: '8,18,28,38,48,58'

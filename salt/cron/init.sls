@@ -37,6 +37,12 @@
     - hour: 3
     - minute: 7
 
+/usr/local/bin/dokku run humanitybox.com node scripts/make/reset.js > /tmp/cron.humanitybox-reset:
+  cron.present:
+    - dayweek: 0
+    - hour: 0
+    - minute: 6
+
 /usr/local/bin/dokku cleanup > /tmp/cron.dokku-cleanup:
   cron.present:
     - user: root

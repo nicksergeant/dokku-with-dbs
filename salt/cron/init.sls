@@ -3,15 +3,15 @@
 #     - user: root
 #     - minute: '0,10,20,30,40,50'
 
-# /usr/local/bin/dokku run slacktappd-pixelbots node index.js > /tmp/cron.slacktappd-pixelbots:
-#   cron.present:
-#     - user: root
-#     - minute: '1,11,21,31,41,51'
+/usr/local/bin/dokku run slacktappd-pixelbots node index.js > /tmp/cron.slacktappd-pixelbots:
+  cron.present:
+    - user: root
+    - minute: '1,11,21,31,41,51'
 
-# /usr/local/bin/dokku run slacktappd-localytics node index.js > /tmp/cron.slacktappd-localytics:
-#   cron.present:
-#     - user: root
-#     - minute: '2,12,22,32,42,52'
+/usr/local/bin/dokku run slacktappd-localytics node index.js > /tmp/cron.slacktappd-localytics:
+  cron.present:
+    - user: root
+    - minute: '2,12,22,32,42,52'
 
 # /usr/local/bin/dokku run slacktocracy-amara iojs index.js > /tmp/cron.slacktocracy-amara:
 #   cron.present:

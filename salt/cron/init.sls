@@ -1,7 +1,7 @@
-# /usr/local/bin/dokku run elfpowered.com python manage.py process_hits > /tmp/cron.elfpowered:
-#   cron.present:
-#     - user: root
-#     - minute: '0,10,20,30,40,50'
+/usr/local/bin/dokku run elfpowered.com python manage.py process_hits > /tmp/cron.elfpowered:
+  cron.present:
+    - user: root
+    - minute: '0,10,20,30,40,50'
 
 /usr/local/bin/dokku run slacktappd-pixelbots node index.js > /tmp/cron.slacktappd-pixelbots:
   cron.present:

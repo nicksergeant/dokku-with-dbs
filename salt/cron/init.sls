@@ -47,3 +47,83 @@
   cron.present:
     - user: root
     - minute: '8,18,28,38,48,58'
+
+/usr/local/bin/dokku letsencrypt fingerlakescomfort.com > /tmp/cron.dokku-letsencrypt-fingerlakescomfort.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 9
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt fitzlimo.com > /tmp/cron.dokku-letsencrypt-fitzlimo.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 10
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt humanitybox.com > /tmp/cron.dokku-letsencrypt-humanitybox.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 11
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt nickandashley.com > /tmp/cron.dokku-letsencrypt-nickandashley.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 12
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt salmon-tracker.com > /tmp/cron.dokku-letsencrypt-salmon-tracker.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 13
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt slacktappd-localytics > /tmp/cron.dokku-letsencrypt-slacktappd-localytics:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 14
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt slacktappd-pixelbots > /tmp/cron.dokku-letsencrypt-slacktappd-pixelbots:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 15
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt slacktocracy-amara > /tmp/cron.dokku-letsencrypt-slacktocracy-amara:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 16
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt slacktocracy-localytics > /tmp/cron.dokku-letsencrypt-slacktocracy-localytics:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 17
+    - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt slacktocracy-siftie > /tmp/cron.dokku-letsencrypt-slacktocracy-siftie:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 18
+    - month: '1,3,5,7,9,11'

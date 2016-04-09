@@ -83,3 +83,11 @@
     - hour: 1
     - minute: 15
     - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt ratedbeer.com > /tmp/cron.dokku-letsencrypt-ratedbeer.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 16
+    - month: '1,3,5,7,9,11'

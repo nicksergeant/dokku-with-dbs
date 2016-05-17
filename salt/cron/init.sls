@@ -91,3 +91,11 @@
     - hour: 1
     - minute: 16
     - month: '1,3,5,7,9,11'
+
+/usr/local/bin/dokku letsencrypt siftie.com > /tmp/cron.dokku-letsencrypt-siftie.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 17
+    - month: '1,3,5,7,9,11'

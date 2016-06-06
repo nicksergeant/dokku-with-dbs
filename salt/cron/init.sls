@@ -1,28 +1,28 @@
-/usr/local/bin/dokku run elfpowered.com python manage.py process_hits > /tmp/cron.elfpowered:
+/usr/local/bin/dokku --rm-container run elfpowered.com python manage.py process_hits > /tmp/cron.elfpowered:
   cron.present:
     - user: root
     - minute: '0,10,20,30,40,50'
 
-/usr/local/bin/dokku run slacktappd-pixelbots node index.js > /tmp/cron.slacktappd-pixelbots:
+/usr/local/bin/dokku --rm-container run slacktappd-pixelbots node index.js > /tmp/cron.slacktappd-pixelbots:
   cron.present:
     - user: root
     - minute: '1,11,21,31,41,51'
 
-/usr/local/bin/dokku run slacktappd-desk node index.js > /tmp/cron.slacktappd-desk:
+/usr/local/bin/dokku --rm-container run slacktappd-desk node index.js > /tmp/cron.slacktappd-desk:
   cron.present:
     - user: root
     - minute: '2,12,22,32,42,52'
 
-/usr/local/bin/dokku run humanitybox.com node scripts/make/stats.js > /tmp/cron.humanitybox-stats:
+/usr/local/bin/dokku --rm-container run humanitybox.com node scripts/make/stats.js > /tmp/cron.humanitybox-stats:
   cron.present:
     - minute: 6
 
-/usr/local/bin/dokku run humanitybox.com node scripts/make/build.js > /tmp/cron.humanitybox-build:
+/usr/local/bin/dokku --rm-container run humanitybox.com node scripts/make/build.js > /tmp/cron.humanitybox-build:
   cron.present:
     - hour: 3
     - minute: 7
 
-/usr/local/bin/dokku run humanitybox.com node scripts/make/reset.js > /tmp/cron.humanitybox-reset:
+/usr/local/bin/dokku --rm-container run humanitybox.com node scripts/make/reset.js > /tmp/cron.humanitybox-reset:
   cron.present:
     - dayweek: 0
     - hour: 0

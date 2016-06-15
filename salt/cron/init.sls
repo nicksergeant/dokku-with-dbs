@@ -38,7 +38,7 @@
   cron.present:
     - dayweek: 1
     - hour: 0
-    - minute: 9
+    - minute: 13
 
 /usr/local/bin/dokku cleanup > /tmp/cron.dokku-cleanup:
   cron.present:

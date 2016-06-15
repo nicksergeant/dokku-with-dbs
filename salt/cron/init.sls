@@ -28,6 +28,18 @@
     - hour: 0
     - minute: 6
 
+/usr/local/bin/dokku --rm-container run broker.nicksergeant.com make items customer=gifs > /tmp/cron.broker-gifs:
+  cron.present:
+    - dayweek: 1
+    - hour: 0
+    - minute: 9
+
+/usr/local/bin/dokku --rm-container run broker.nicksergeant.com make items customer=isles > /tmp/cron.broker-isles:
+  cron.present:
+    - dayweek: 1
+    - hour: 0
+    - minute: 9
+
 /usr/local/bin/dokku cleanup > /tmp/cron.dokku-cleanup:
   cron.present:
     - user: root

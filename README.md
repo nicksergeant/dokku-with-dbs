@@ -6,7 +6,6 @@ The following databases are included:
 
 - PostgreSQL
 - MongoDB
-- RethinkDB
 
 These databases reside on the host machine itself and are not managed with Dokku
 or Docker. It's up to you to manage users and databases.
@@ -21,4 +20,3 @@ Setup
 5. Log out of the server.
 6. If required, change hostname in `pillar/production.sls` and `Makefile`.
 7. Run `make server`.
-8. When prompted, enter a password to be used for the RethinkDB web admin.

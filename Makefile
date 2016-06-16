@@ -18,7 +18,6 @@ server:
 	@ssh root@dokku.nicksergeant.com 'add-apt-repository -y ppa:saltstack/salt'
 	@ssh root@dokku.nicksergeant.com 'apt-get update'
 	@ssh root@dokku.nicksergeant.com 'apt-get install -y salt-minion'
-	ssh -t root@dokku.nicksergeant.com 'htpasswd -c /etc/.htpasswd rethinkdb'
 	@scp -q -P 22 -r ./salt/ root@dokku.nicksergeant.com:salt
 	@scp -q -P 22 -r ./pillar/ root@dokku.nicksergeant.com:pillar
 	@ssh root@dokku.nicksergeant.com 'rm -rf /srv'

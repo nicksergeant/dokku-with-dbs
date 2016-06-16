@@ -8,4 +8,3 @@ base:
     - fish
     - mongodb
     - postgresql
-    - rethinkdb

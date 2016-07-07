@@ -125,7 +125,7 @@
     - minute: 18
     - month: '1,3,5,7,9,11'
 
-/usr/local/bin/dokku letsencrypt twolake.beer > /tmp/cron.dokku-letsencrypt-twolake.beer:
+/usr/local/bin/dokku letsencrypt twolakebeer.com > /tmp/cron.dokku-letsencrypt-twolakebeer.com:
   cron.present:
     - user: root
     - daymonth: 1

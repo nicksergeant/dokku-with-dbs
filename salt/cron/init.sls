@@ -13,6 +13,11 @@
     - user: root
     - minute: '2,12,22,32,42,52'
 
+/usr/local/bin/dokku --rm-container run slacktappd-homebrewing node index.js > /tmp/cron.slacktappd-homebrewing:
+  cron.present:
+    - user: root
+    - minute: '3,13,23,33,43,53'
+
 /usr/local/bin/dokku --rm-container run humanitybox.com node scripts/make/stats.js > /tmp/cron.humanitybox-stats:
   cron.present:
     - minute: 6

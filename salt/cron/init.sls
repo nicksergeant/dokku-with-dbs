@@ -122,14 +122,6 @@
     - minute: 17
     - month: '1,3,5,7,9,11'
 
-/usr/bin/dokku letsencrypt slack.siftie.com > /tmp/cron.dokku-letsencrypt-slack.siftie.com:
-  cron.present:
-    - user: root
-    - daymonth: 1
-    - hour: 1
-    - minute: 18
-    - month: '1,3,5,7,9,11'
-
 /usr/bin/dokku letsencrypt twolakebeer.com > /tmp/cron.dokku-letsencrypt-twolakebeer.com:
   cron.present:
     - user: root

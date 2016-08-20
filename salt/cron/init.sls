@@ -129,3 +129,11 @@
     - hour: 1
     - minute: 19
     - month: '1,3,5,7,9,11'
+
+/usr/bin/dokku letsencrypt rewindhq.com > /tmp/cron.dokku-letsencrypt-rewindhq.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 20
+    - month: '1,3,5,7,9,11'

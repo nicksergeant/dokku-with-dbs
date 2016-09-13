@@ -137,3 +137,27 @@
     - hour: 1
     - minute: 20
     - month: '1,3,5,7,9,11'
+
+/usr/bin/dokku letsencrypt slacktapped-hopdropclub > /tmp/cron.dokku-letsencrypt-slacktapped-hopdropclub:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 21
+    - month: '1,3,5,7,9,11'
+
+/usr/bin/dokku letsencrypt slacktapped-desk > /tmp/cron.dokku-letsencrypt-slacktapped-desk:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 22
+    - month: '1,3,5,7,9,11'
+
+/usr/bin/dokku letsencrypt slacktapped-homebrewchat > /tmp/cron.dokku-letsencrypt-slacktapped-homebrewchat:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 23
+    - month: '1,3,5,7,9,11'

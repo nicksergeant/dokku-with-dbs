@@ -169,3 +169,11 @@
     - hour: 1
     - minute: 24
     - month: '1,3,5,7,9,11'
+
+/usr/bin/dokku letsencrypt snipt.nicksergeant.com > /tmp/cron.dokku-letsencrypt-snipt.nicksergeant.com:
+  cron.present:
+    - user: root
+    - daymonth: 1
+    - hour: 1
+    - minute: 24
+    - month: '1,3,5,7,9,11'

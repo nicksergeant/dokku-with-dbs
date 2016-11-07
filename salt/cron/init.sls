@@ -3,21 +3,6 @@
     - user: root
     - minute: '0,10,20,30,40,50'
 
-/usr/bin/dokku --rm-container run slacktappd-hopdropclub node index.js > /tmp/cron.slacktappd-hopdropclub:
-  cron.present:
-    - user: root
-    - minute: '1,11,21,31,41,51'
-
-/usr/bin/dokku --rm-container run slacktappd-desk node index.js > /tmp/cron.slacktappd-desk:
-  cron.present:
-    - user: root
-    - minute: '2,12,22,32,42,52'
-
-/usr/bin/dokku --rm-container run slacktappd-homebrewing node index.js > /tmp/cron.slacktappd-homebrewing:
-  cron.present:
-    - user: root
-    - minute: '3,13,23,33,43,53'
-
 /usr/bin/dokku --rm-container run humanitybox.com node scripts/make/stats.js > /tmp/cron.humanitybox-stats:
   cron.present:
     - minute: 6
